@@ -3,7 +3,8 @@ const createObserver = () => {
   const observer = new IntersectionObserver(changes => {
     const wrapper = document.getElementById('wrapper')
     const newImg = document.createElement('img')
-    newImg.src = '//unsplash.it/600/800?random&time=' + Date.now()
+    newImg.src = '//picsum.photos/600/800?random&time=' + Date.now()
+    newImg.alt = 'https://picsum.photos/600/800?random'
     wrapper.appendChild(newImg)
   })
   observer.observe(target)
